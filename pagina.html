@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuidado del Medio Ambiente</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d42323;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 130px;
+      background-color: #3bd427;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    main {
+      display: flex;
+      margin-top: 130px;
+      height: calc(100vh - 130px);
+    }
+
+    nav {
+      width: 20%;
+      background-color: #530ef3;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    nav button {
+      width: 90%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f11010;
+      color: rgb(29, 216, 76);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #f1690f;
+    }
+
+    section {
+      width: 60%;
+      padding: 0;
+      background-color: #18d638;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    aside {
+      width: 20%;
+      background-color: #4e26dd;
+      padding: 20px;
+    }
+
+    aside img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="banner.jpg" alt="Cuidado del Medio Ambiente" />
+  </header>
+
+  <main>
+    <nav>
+      <button onclick="cambiarContenido('menu.html')">Menú Principal</button>
+      <button onclick="cambiarContenido('reforestacion.html')">Reforestación</button>
+      <button onclick="cambiarContenido('institucional.html')">Limpieza Institucional</button>
+      <button onclick="cambiarContenido('externa.html')">Limpieza Externa</button>
+      <button onclick="cambiarContenido('fauna.html')">Flora y Fauna</button>
+    </nav>
+
+    <section>
+      <iframe id="iframeContenido" src="menu.html"></iframe>
+    </section>
+
+    <aside>
+      <img src="e:\actividad final\decoracion.jpg" alt="Decoración" />
+    </aside>
+  </main>
+
+  <script>
+    function cambiarContenido(archivo) {
+      document.getElementById("iframeContenido").src = archivo;
+    }
+  </script>
+
+</body>
+</html>
